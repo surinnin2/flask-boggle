@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Homepage{% endblock %}
+
+
+{% block body %}
+<div>
+    <h2 class="title" id="title">Boggle!</h2>
+</div>
+<div class="float-container">
+    <div class="float-child game-board" id="board">
+        {% for row in board %}
+            {% for letter in row %}
+                <div class="cell">{{letter}}</div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <div class="float-child-2 mx-auto my-3" style="width: 540px; height: 400px;">
+        <button id="start-btn" class="btn btn-success mx-auto">Start</button>
+        <form method="POST" class="form-inline" id="submit-form">
+            <div class="form-group" id="submit-input">
+                <label for="word-input" class="form-label mx-3 ml-5">Find a Word!</label>
+                <input type="text" class="form-control mx-1" id="word-input" placeholder="Your Guess">
+            </div>
+            <div id="submit-btn">
+                <button type="submit" class="btn btn-primary mx-1">Submit</button>
+            </div>
+        </form>
+        <div id="score-board">
+            <h5 id="high-score">HighScore: 0</h5>
+            <h5 id="num-played">Number of Games Played: 0</h5>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/word_submit.js"></script>
+{% endblock %}

@@ -1,0 +1,40 @@
+.game-board{ 
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px; 
+    grid-template-rows: 100px 100px 100px 100px 100px;
+    justify-content: center;
+   }
+
+   .cell {
+    display: flex;
+    background-color: turquoise;
+    border: 2px solid white;
+    align-items: center;
+    justify-content: center;
+   }
+
+.title {
+    text-align: center;
+    margin-block: 30px;
+}
+
+#start-btn {
+    margin-bottom: 40px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+}
+
+.float-child-2{
+    width: 50%;
+    float: left;
+    border: 3px solid blue;
+    padding: 10px;
+}
+
+#score-board{
+    margin-top: 100px;
+    margin-left: 50px;
+}
